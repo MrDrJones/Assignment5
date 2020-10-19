@@ -1,0 +1,40 @@
+/*
+Assignment5B
+Section 16
+Indiana Jones
+*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+int yrs;
+int start;
+int max;
+int min;
+int maxyr;
+int minyr;
+
+cout << "Enter the Number of years: ";
+cin >> yrs;
+int arr[yrs];
+
+for(int i = 0;i < yrs;i++){
+cout << "Enter stat for year " << start << ":";
+cin >> arr[i];
+
+if(arr[i] > arr[i-1]){
+max = arr[i];
+maxyr = start;
+}
+if(arr[i] < arr[i-1]){
+min = arr[i];
+minyr = start;
+}
+start++;
+}
+
+cout << "Best start was " << max << " in year " << maxyr << endl;
+cout << "Worst stat was " << min << " in year " << minyr << endl;
+}
